@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator Forms</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div class="form-container">
             <h2>Heron's Formula</h2>
-            <label for="side-a">Side a:</label>
-            <input type="text" id="side-a">
-            <label for="side-b">Side b:</label>
-            <input type="text" id="side-b">
-            <label for="side-c">Side c:</label>
-            <input type="text" id="side-c">
-            <label for="area-result">Area (Result):</label>
-            <input type="text" id="area-result" disabled>
-            <button>Calculate</button>
+            <label for="side-a-heron">Side a:</label>
+            <input type="text" id="side-a-heron">
+            <label for="side-b-heron">Side b:</label>
+            <input type="text" id="side-b-heron">
+            <label for="side-c-heron">Side c:</label>
+            <input type="text" id="side-c-heron">
+            <label for="heron-result">Area (Result):</label>
+            <input type="text" id="heron-result" disabled>
+            <button id="calculate-heron">Calculate</button>
         </div>
 
         <div class="form-container">
             <h2>Ambiguous Case</h2>
-            <label for="angle-a">Angle A:</label>
-            <input type="text" id="angle-a">
-            <label for="side-a2">Side a:</label>
-            <input type="text" id="side-a2">
-            <label for="side-b2">Side b:</label>
-            <input type="text" id="side-b2">
+            <label for="angle-a-ambiguous">Angle A:</label>
+            <input type="text" id="angle-a-ambiguous">
+            <label for="side-a-ambiguous">Side a:</label>
+            <input type="text" id="side-a-ambiguous">
+            <label for="side-b-ambiguous">Side b:</label>
+            <input type="text" id="side-b-ambiguous">
             <label for="triangle-type-result">Triangle Type (Result):</label>
             <input type="text" id="triangle-type-result" disabled>
-            <button>Calculate</button>
+            <button id="calculate-ambiguous">Calculate</button>
         </div>
 
         <div class="form-container">
@@ -41,7 +40,7 @@
             <input type="text" id="root-guess">
             <label for="root-approximation-result">Root Approximation (Result):</label>
             <input type="text" id="root-approximation-result" disabled>
-            <button>Calculate</button>
+            <button id="calculate-newton">Calculate</button>
         </div>
 
         <div class="form-container">
@@ -56,8 +55,9 @@
             <input type="text" id="polynomial-function-result" disabled>
             <label for="polynomial-evaluation-result">Polynomial Evaluation (Result):</label>
             <input type="text" id="polynomial-evaluation-result" disabled>
-            <button>Calculate</button>
+            <button id="calculate-polynomial">Calculate</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
