@@ -2,6 +2,61 @@ const heronsFormula = (a, b, c) => {
     return (1/4) * Math.sqrt(4*a*a*b*b - Math.pow(a*a + b*b - c*c, 2));
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.getElementById('calculate-heron').addEventListener('click', function() {
     var a = document.getElementById('side-a-heron').value;
     var b = document.getElementById('side-b-heron').value;
@@ -10,8 +65,7 @@ document.getElementById('calculate-heron').addEventListener('click', function() 
 });
 
 const ambiguousCase = (a, b, A) => {
-    var ARadians = A * (Math.PI / 180);
-    var h = b * Math.sin(ARadians);
+    var h = b * Math.sin(A * (Math.PI / 180));
 
     if (A <= 90) {
         console.log('a: ' + a + ' h: ' + h)
@@ -28,13 +82,13 @@ const ambiguousCase = (a, b, A) => {
         }
     }
     else if (A <= 180) {
-        if ((a < h) || (a == h)) {
+        if ((a <= b)) {
             return 'No triangle'
         } else if (a > b) {
             console.log('One triangle obtuse')
             return 'One triangle'
         } else {
-            return 'No solution'
+            return 'Error.'
         }
     }
 }
@@ -45,3 +99,8 @@ document.getElementById('calculate-ambiguous').addEventListener('click', functio
     var A = document.getElementById('angle-a-ambiguous').value;
     document.getElementById('triangle-type-result').value = ambiguousCase(a, b, A);
 });
+
+
+const newtonsMethod = (g) => {
+
+}
