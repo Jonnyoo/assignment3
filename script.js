@@ -29,34 +29,6 @@ const heronsFormula = (a, b, c) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.getElementById('calculate-heron').addEventListener('click', function() {
     var a = document.getElementById('side-a-heron').value;
     var b = document.getElementById('side-b-heron').value;
@@ -104,3 +76,8 @@ document.getElementById('calculate-ambiguous').addEventListener('click', functio
 const newtonsMethod = (g) => {
 
 }
+
+document.getElementById('calculate-newton').addEventListener('click', function() {
+    var g = document.getElementById('root-guess').value;
+    document.getElementById('triangle-type-result').value = ambiguousCase(a, b, A);
+});
