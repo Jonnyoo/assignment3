@@ -44,6 +44,7 @@ document.getElementById('calculate-ambiguous').addEventListener('click', functio
     var a = parseFloat(document.getElementById('side-a-ambiguous').value);
     var b = parseFloat(document.getElementById('side-b-ambiguous').value);
     var A = parseFloat(document.getElementById('angle-a-ambiguous').value);
+
     document.getElementById('triangle-type-result').value = ambiguousCase(a, b, A);
 });
 
