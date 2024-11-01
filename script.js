@@ -10,30 +10,32 @@ document.getElementById('calculate-heron').addEventListener('click', function() 
 });
 
 const ambiguousCase = (a, b, A) => {
+    if (A == 90) {
+        return 'Right triangle';
+    }
+
     var h = b * Math.sin(A * (Math.PI / 180));
 
     if (A <= 90) {
         console.log('a: ' + a + ' h: ' + h)
         if (a < h) {
-            return 'No triangle'
-        } else if (a == h) {
-            return 'Right triangle'
+            return 'No triangle';
         } else if (a > h) {
-            return 'One triangle'
+            return 'One triangle';
         } else if ((h < a) && (a < b)) {
-            return 'Two triangles (ambiguous case)'
+            return 'Two triangles (ambiguous case)';
         } else {
-            return 'No solution'
+            return 'No solution';
         }
     }
     else if (A <= 180) {
         if ((a <= b)) {
-            return 'No triangle'
+            return 'No triangle';
         } else if (a > b) {
             console.log('One triangle obtuse')
-            return 'One triangle'
+            return 'One triangle';
         } else {
-            return 'Error.'
+            return 'No solution';
         }
     }
 }
@@ -65,4 +67,35 @@ const newtonsMethod = (g) => {
 document.getElementById('calculate-newton').addEventListener('click', function() {
     var g = parseFloat(document.getElementById('root-guess').value);
     document.getElementById('root-approximation-result').value = newtonsMethod(g);
+});
+
+const polynomialEvaluation = (coefficients, exponents, xvalue) => {
+    var result = 0;
+    for (var i = 0; i < coefficients.length; i++) {
+        result += parseFloat(coefficients[i]) * Math.pow(xvalue, parseFloat(exponents[i]));
+    }
+    return result;
+}
+
+const polynomialFunction = (coefficients, exponents) => {
+    var result = '';
+    for (var i = 0; i < coefficients.length; i++) {
+        if (i == 0) {
+            result += coefficients[i] + 'x^' + exponents[i];
+        } else if (coefficients[i] < 0) {
+            result += ' - ' + Math.abs(coefficients[i]) + 'x^' + exponents[i];
+        } else {
+            result += ' + ' + coefficients[i] + 'x^' + exponents[i];
+        }
+    }
+    return result;
+}
+
+document.getElementById('calculate-polynomial').addEventListener('click', function() {
+    var coefficients = document.getElementById('coefficients').value.split(' ');
+    var exponents = document.getElementById('exponents').value.split(' ');
+    var xvalue = parseFloat(document.getElementById('x-value').value);
+
+    document.getElementById('polynomial-function-result').value = polynomialFunction(coefficients, exponents);
+    document.getElementById('polynomial-evaluation-result').value = polynomialEvaluation(coefficients, exponents, xvalue);
 });
