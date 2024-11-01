@@ -20,7 +20,7 @@ const ambiguousCase = (a, b, A) => {
         console.log('a: ' + a + ' h: ' + h)
         if (a < h) {
             return 'No triangle';
-        } else if (a > h) {
+        } else if (a > b) {
             return 'One triangle';
         } else if ((h < a) && (a < b)) {
             return 'Two triangles (ambiguous case)';
