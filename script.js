@@ -1,8 +1,8 @@
 const heronsFormula = (a, b, c) => {
-    return (1/4) * Math.sqrt(4*a*a*b*b - Math.pow(a*a + b*b - c*c, 2));
+    return (1 / 4) * Math.sqrt(4 * a * a * b * b - Math.pow(a * a + b * b - c * c, 2));
 }
 
-document.getElementById('calculate-heron').addEventListener('click', function() {
+document.getElementById('calculate-heron').addEventListener('click', function () {
     var a = parseFloat(document.getElementById('side-a-heron').value);
     var b = parseFloat(document.getElementById('side-b-heron').value);
     var c = parseFloat(document.getElementById('side-c-heron').value);
@@ -40,7 +40,7 @@ const ambiguousCase = (a, b, A) => {
     }
 }
 
-document.getElementById('calculate-ambiguous').addEventListener('click', function() {
+document.getElementById('calculate-ambiguous').addEventListener('click', function () {
     var a = parseFloat(document.getElementById('side-a-ambiguous').value);
     var b = parseFloat(document.getElementById('side-b-ambiguous').value);
     var A = parseFloat(document.getElementById('angle-a-ambiguous').value);
@@ -65,7 +65,7 @@ const newtonsMethod = (g) => {
     return g;
 }
 
-document.getElementById('calculate-newton').addEventListener('click', function() {
+document.getElementById('calculate-newton').addEventListener('click', function () {
     var g = parseFloat(document.getElementById('root-guess').value);
     document.getElementById('root-approximation-result').value = newtonsMethod(g);
 });
@@ -92,7 +92,7 @@ const polynomialFunction = (coefficients, exponents) => {
     return result;
 }
 
-document.getElementById('calculate-polynomial').addEventListener('click', function() {
+document.getElementById('calculate-polynomial').addEventListener('click', function () {
     var coefficients = document.getElementById('coefficients').value.split(' ');
     var exponents = document.getElementById('exponents').value.split(' ');
     var xvalue = parseFloat(document.getElementById('x-value').value);

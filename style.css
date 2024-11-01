@@ -1,8 +1,6 @@
-/* style.css */
-
 body {
-    background-color: #121212; /* Dark mode background */
-    color: #ffffff; /* Light text for dark mode */
+    background-color: #121212;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
     display: flex;
@@ -18,7 +16,7 @@ body {
 }
 
 .form-container {
-    background-color: #1e1e1e; /* Darker container background */
+    background-color: #1e1e1e;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -28,7 +26,7 @@ body {
 }
 
 h2 {
-    color: #ffac47; /* Mango accent color */
+    color: #ffac47;
     margin-bottom: 15px;
     text-align: center;
 }
@@ -38,10 +36,10 @@ label {
 }
 
 input[type="text"] {
-    background-color: #333333; /* Dark input background */
-    border: 1px solid #555555; /* Dark border for inputs */
+    background-color: #333333;
+    border: 1px solid #555555;
     border-radius: 5px;
-    color: #ffffff; /* Light text for inputs */
+    color: #ffffff;
     padding: 10px;
     margin-bottom: 10px;
     outline: none;
@@ -49,19 +47,19 @@ input[type="text"] {
 }
 
 input[type="text"]:disabled {
-    background-color: #2a2a2a; /* Slightly darker for disabled inputs */
+    background-color: #2a2a2a;
 }
 
 button {
-    background-color: #ffac47; /* Mango accent color */
+    background-color: #ffac47;
     border: none;
     border-radius: 5px;
-    color: #121212; /* Dark text on mango background */
+    color: #121212;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #e69530; /* Darker mango color on hover */
+    background-color: #e69530;
 }
